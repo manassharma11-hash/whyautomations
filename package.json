@@ -1,0 +1,6 @@
+{
+  "name": "whyautomations",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Self-contained React production distribution prepared for Vercel."
+}
