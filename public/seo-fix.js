@@ -76,8 +76,43 @@
     });
   }
 
-  apply();
-  removeDeadPrivacyLink();
-  window.addEventListener('popstate', function () { apply(); removeDeadPrivacyLink(); });
-  new MutationObserver(function () { apply(); removeDeadPrivacyLink(); }).observe(document.documentElement, { childList: true, subtree: true });
+  // Apply metadata once on load and after client-side route changes.  Avoid a
+  // document-wide mutation observer here: the app is animation-heavy and a
+  // callback for every DOM mutation can cause runaway work in the browser.
+  function refresh() {
+    window.setTimeout(function () {
+      apply();
+      removeDeadPrivacyLink();
+    }, 0);
+  }
+
+  var originalPushState = window.history.pushState;
+  var originalReplaceState = window.history.replaceState;
+  window.history.pushState = function () {
+    var result = originalPushState.apply(this, arguments);
+    refresh();
+    return result;
+  };
+  window.history.replaceState = function () {
+    var result = originalReplaceState.apply(this, arguments);
+    refresh();
+    return result;
+  };
+  window.addEventListener('popstate', refresh);
+  refresh();
+
+  // The footer is rendered by React after this script loads.  Observe only
+  // body children for the one dead-link cleanup, never the whole document.
+  function watchForDeadPrivacyLink() {
+    if (!document.body || !window.MutationObserver) return;
+    var observer = new MutationObserver(function () {
+      if (document.querySelector('a[href="/privacy-policy"]')) {
+        removeDeadPrivacyLink();
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.setTimeout(function () { observer.disconnect(); }, 10000);
+  }
+  watchForDeadPrivacyLink();
 })();

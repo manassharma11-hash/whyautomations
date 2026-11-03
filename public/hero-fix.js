@@ -1,12 +1,12 @@
 (function () {
   const mount = () => {
     const frame = document.querySelector('iframe[src*="cloudflarestream"]');
-    if (!frame || frame.dataset.brandReplaced) return;
+    if (!frame || frame.dataset.brandReplaced) return false;
 
     frame.dataset.brandReplaced = 'true';
     frame.style.display = 'none';
     const panel = frame.parentElement;
-    if (!panel || panel.querySelector('[data-whyautomations-hero]')) return;
+    if (!panel || panel.querySelector('[data-whyautomations-hero]')) return false;
 
     const hero = document.createElement('div');
     hero.dataset.whyautomationsHero = 'true';
@@ -16,8 +16,15 @@
     style.textContent = '@keyframes whyautomations-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}';
     document.head.appendChild(style);
     panel.appendChild(hero);
+    return true;
   };
 
-  new MutationObserver(mount).observe(document.documentElement, { childList: true, subtree: true });
+  const observeRoot = document.body || document.documentElement;
+  if (observeRoot && window.MutationObserver) {
+    const observer = new MutationObserver(() => {
+      if (mount()) observer.disconnect();
+    });
+    observer.observe(observeRoot, { childList: true, subtree: true });
+  }
   mount();
 })();
