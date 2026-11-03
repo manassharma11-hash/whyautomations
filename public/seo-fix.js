@@ -4,13 +4,13 @@
   var SITE = 'https://whyautomations.vercel.app';
   var pages = {
     '/': ['WhyAutomations | Premium Video Editing, Web Design & Creative Agency', 'WhyAutomations is a multidisciplinary creative agency in India for video, web and app development, brand systems, UGC and performance marketing.'],
-    '/about-us': ['About WhyAutomations | Creative Studio in Noida, Delhi', 'Learn about WhyAutomations, a creative studio for brand, product, video and digital experiences in Noida, Delhi.'],
+    '/about-us': ['About WhyAutomations | Creative Studio in Patna, India', 'Learn about WhyAutomations, a creative studio for brand, product, video and digital experiences in Patna, India.'],
     '/what-we-do': ['Creative Services | Video Editing, Web & App Development', 'Explore WhyAutomations services: video editing, motion design, web and app development, branding, UGC and performance marketing.'],
     '/our-work': ['Our Work | Video, Digital Products, Brand & Growth', 'Explore WhyAutomations client work across video, digital products, brand identity and measurable growth.'],
     '/portfolio-gallery': ['Portfolio Gallery | WhyAutomations Creative Work', 'Browse the WhyAutomations portfolio gallery featuring selected creative, brand and digital work.'],
     '/people': ['Our Team | WhyAutomations Creative Studio', 'Meet the people behind WhyAutomations and the creative, digital and growth work we deliver.'],
     '/join-us': ['Join WhyAutomations | Careers at a Creative Studio', 'Explore opportunities to work with the WhyAutomations creative and digital studio team.'],
-    '/contact': ['Contact WhyAutomations | Start a Project', 'Contact WhyAutomations in Noida, Delhi to discuss video, web, app, branding or automation work.'],
+    '/contact': ['Contact WhyAutomations | Start a Project', 'Contact WhyAutomations in Patna, India to discuss video, web, app, branding or automation work.'],
     '/areas-we-serve': ['Areas We Serve | WhyAutomations Creative Agency', 'WhyAutomations serves businesses across India with video, web, app, branding and digital growth services.'],
     '/services/video-production': ['Video Editing & Motion Design | WhyAutomations', 'Professional video editing and motion design for brands, campaigns, social content and digital products.'],
     '/services/web-development': ['Web & App Development | WhyAutomations', 'Web and app development for useful, polished digital products built around your business goals.'],
