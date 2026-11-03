@@ -8,7 +8,6 @@
     '/what-we-do': ['Creative Services | Video Editing, Web & App Development', 'Explore WhyAutomations services: video editing, motion design, web and app development, branding, UGC and performance marketing.'],
     '/our-work': ['Our Work | Video, Digital Products, Brand & Growth', 'Explore WhyAutomations client work across video, digital products, brand identity and measurable growth.'],
     '/portfolio-gallery': ['Portfolio Gallery | WhyAutomations Creative Work', 'Browse the WhyAutomations portfolio gallery featuring selected creative, brand and digital work.'],
-    '/insights': ['Insights | Marketing, Design & Development Notes', 'Read WhyAutomations insights on video, marketing, design, branding, development and digital products.'],
     '/people': ['Our Team | WhyAutomations Creative Studio', 'Meet the people behind WhyAutomations and the creative, digital and growth work we deliver.'],
     '/join-us': ['Join WhyAutomations | Careers at a Creative Studio', 'Explore opportunities to work with the WhyAutomations creative and digital studio team.'],
     '/contact': ['Contact WhyAutomations | Start a Project', 'Contact WhyAutomations in Noida, Delhi to discuss video, web, app, branding or automation work.'],
