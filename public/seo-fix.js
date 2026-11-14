@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var SITE = 'https://whyautomations.vercel.app';
+  var SITE = 'https://www.whyautomations.site';
   var pages = {
     '/': ['WhyAutomations | Premium Video Editing, Web Design & Creative Agency', 'WhyAutomations is a multidisciplinary creative agency in India for video, web and app development, brand systems, UGC and performance marketing.'],
     '/about-us': ['About WhyAutomations | Creative Studio in Patna, India', 'Learn about WhyAutomations, a creative studio for brand, product, video and digital experiences in Patna, India.'],
